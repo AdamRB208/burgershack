@@ -16,6 +16,9 @@ const FAKEDB = {
   ]
 }
 class BurgersService {
+  addBurger() {
+    FAKEDB.burgers.push(burgerData)
+  }
   getBurgers() {
     const burgers = FAKEDB.burgers
     return burgers

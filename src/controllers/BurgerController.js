@@ -21,6 +21,10 @@ export class BurgerController extends BaseController {
   }
 
   addBurger(request, response, next) {
-    console.log('adding burger')
+    console.log('adding burger', request.body)
+    const burgerData = request.body
+    const burger = burgersService.addBurger(burgerData)
+    response.send(burger)
+
   }
 }
